@@ -11,6 +11,7 @@ app.use(express.urlencoded({ extended: true}))
 
 const schoolRouter = require('./routers/school.router')
 const classRouter = require('./routers/class.router')
+const teacherRouter = require('./routers/teacher.router'
 
 // to register Authorizationa in browser console
 const corsOption = {exposedHeaders: "Authorization"}
@@ -27,6 +28,7 @@ app.get('/test', (req, res) =>{
 // Routes 
 app.use('/api/school', schoolRouter)
 app.use('/api/class', classRouter)
+app.use('/api/teacher', teacherRouter)
 
 
 // DB   MONGO_URL=mongodb+srv://7atim1000:1jCc7WYQ8uEXuKvf@cluster0.r2oymje.mongodb.net/
